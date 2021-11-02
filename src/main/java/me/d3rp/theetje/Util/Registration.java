@@ -5,6 +5,7 @@ import me.d3rp.theetje.Setup.ModBlocks;
 import me.d3rp.theetje.Theetje;
 import me.d3rp.theetje.World.gen.OreGeneration;
 import net.minecraft.block.Block;
+import net.minecraft.block.FlowerBlock;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;

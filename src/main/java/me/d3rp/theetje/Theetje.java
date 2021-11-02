@@ -1,7 +1,10 @@
 package me.d3rp.theetje;
 
+import me.d3rp.theetje.Setup.ModBlocks;
 import me.d3rp.theetje.Util.Registration;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -53,6 +56,7 @@ public class Theetje {
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        RenderTypeLookup.setRenderLayer(ModBlocks.MINT.get(), RenderType.getCutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

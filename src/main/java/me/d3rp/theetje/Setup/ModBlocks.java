@@ -1,14 +1,12 @@
 package me.d3rp.theetje.Setup;
 
-import me.d3rp.theetje.Blocks.BlockFlowerMint;
 import me.d3rp.theetje.Util.Registration;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
@@ -20,11 +18,9 @@ public class ModBlocks {
                     .harvestLevel(2)
                     .sound(SoundType.STONE)));
 
-
-    public static final RegistryObject<BlockFlowerMint> MINTFLOWER = Register("mint_flower", () ->
-            new BlockFlowerMint()
+    public static final RegistryObject<Block> MINT = Register("mint", () ->
+            new FlowerBlock(Effects.HASTE, 2,AbstractBlock.Properties.from(Blocks.FERN))
             );
-
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return Registration.BLOCKS.register(name, block);

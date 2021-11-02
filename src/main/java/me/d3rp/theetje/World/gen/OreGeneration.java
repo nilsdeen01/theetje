@@ -36,9 +36,4 @@ public class OreGeneration {
         );
     }
 
-//    private static void generateFlower(BiomeGenerationSettingsBuilder settings, RuleTest fillerType, BlockState state, int veinSize, int minHeight, int maxHeight, int perChunk) {
-//        settings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.FLOWER.withConfiguration(new DecoratedFeature(Feature.FLOWER, new SimpleBlockStateProvider("")))
-//        );
-//    }
-
 }
